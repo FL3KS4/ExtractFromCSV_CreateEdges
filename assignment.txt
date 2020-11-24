@@ -1,0 +1,15 @@
+Jedná se o anonymizovanou sadu emailů extrahovanou do XML souboru z emailových schránek šesti lidí v malé firmě zabývající se vývojem software.
+
+Každý mail obsahuje anonymizované uživatele - odesílatele, skupinu příjemců a skupinu příjemců v kopii (identifikátory uživatelů začínají slovem "name"). Anonymizovány jsou také domény, přičemž může nastat situace, kdy jedna a tatáž doména může mít více verzí, např. firma.cz, firma.eu, firma.com (jejich identifikátory začínají slovem "domain"). Každý mail dále obsahuje anonymizovaný seznam slov v předmětu mailu (jejich identifikátory začínají slovem "term").
+
+Uživatelů je necelých 14000, domén přes 7000, a slov v předmětech přes 22000.
+
+Úkoly k řešení:
+1. Zkonstruujte síť uživatelů tak, že hrana bude existovat mezi odesílatelem a jeho příjemci ("to" i "cc"). Dále budou existovat hrany mezi každou dvojicí příjemců ("to") a mezi každou dvojicí příjemců kopie ("cc"). Zvažte, v kolika mailech nejméně se musí hrana vyskytovat, aby bylo užitečné ji mít v konstruované síti. Zvažte také, v kolika mailech musí uživatel být, aby mělo smysl ho mít v konstruované síti. Ignorujte situace, kdy odesílatel i přijemce je jeden a tentýž uživatel.
+
+2. Zkonstruujte podobnou síť pro domény. Zvažte, v kolika mailech nejméně se musí hrana resp. doména vyskytovat, aby bylo užitečné je mít v konstruované síti. Ignorujte situace, kdy odesílatel i příjemci mají stejnou doménu.
+
+3. Zkonstrujte síť slov (termů) tak, že hrana mezi slovy bude existovat v případě, že se spolu vyskytují alespoň v jednom mailu. Zvažte, v kolika mailech nejméně se musí hrana resp. slovo vyskytovat, aby bylo užitečné je mít v konstruované síti. 
+
+Ve všech případech konstruujte neorientovanou neváženosu síť. Můžete popřemýšlet i o vážené síti, kdy váhou bude opakování hrany v mailech.
+
